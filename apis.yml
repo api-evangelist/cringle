@@ -1,23 +1,66 @@
 aid: cringle
+
 name: Cringle
-description: 'Cringle is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Cringle is a stub company identified in the API Evangelist secondary-market harvest. It currently lacks a public website or documented
+  APIs. This entry serves as a placeholder for future enrichment when more information becomes available.
+
 url: https://raw.githubusercontent.com/api-evangelist/cringle/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-11 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-11'
+
 modified: '2026-10-11'
+
 tags:
 - Company
-apis: []
+- Finance
+- Marketplace
+- Startup
+- Technology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/cringle-hosts.yml
+- type: Vendors
+  url: vendors/cringle-vendors.yml
+- type: DomainSecurity
+  url: security/cringle-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/cringle
+
+apis:
+- name: Cringle API
+  description: Cringle does not appear to expose a public developer API. The website redirects to a login page with no documentation.
+  humanURL: https://www.cringle.org
+  baseURL: null
+  aid: cringle:cringle-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: The company website redirects to a login page and provides no public API documentation or developer program.
+  evidence:
+  - url: https://www.cringle.org
+    status: 303
+  checked: '2026-10-11'
+x-enrichment:
+  date: '2026-10-11'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

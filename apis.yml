@@ -40,8 +40,6 @@ common:
   url: vendors/cringle-vendors.yml
 - type: DomainSecurity
   url: security/cringle-domain-security.yml
-- type: Website
-  url: https://equityzen.com/company/cringle
 
 apis:
 - name: Cringle API
@@ -58,6 +56,7 @@ x-coverage:
   - url: https://www.cringle.org
     status: 303
   checked: '2026-10-11'
+  recheck_after: '2027-10-12'
 x-enrichment:
   date: '2026-10-11'
   status: enriched
